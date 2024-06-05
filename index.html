@@ -49,7 +49,6 @@ nav{
 .box{
   display: grid;
   grid-template-columns: repeat(2, .1fr);
-  box-shadow: 5px 5px 5px;
 }
 .lesen1{
   height: 50vh;
@@ -63,15 +62,20 @@ nav{
 }
 
 .postcreater{
+    position: relative;
   height: 55vh;
   display: flex;
   justify-content: center;
   color: black;
-  box-shadow: 5px 5px 5px;
+  background-image: url(window.png);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
 }
 .allfeed{
   background-color: rgb(240, 242, 242);
-  box-shadow: 5px 5px 5px;
+  height: 50vh;
+  background-color: aliceblue;
 }
 .name, .butt{
   display: block;
@@ -79,25 +83,18 @@ nav{
 .name, .email{
   width: 50vh;
   height: 7vh;
-  box-shadow: 5px 5px 5px;
   margin: 5px;
+}
+.name, .emaila::placeholder{
+    text-align: center;
 }
 .masseg{
   height: 25vh;
   width: 40vh;
-  box-shadow: 5px 5px 5px;
 }
 .butt{
   width: 15vh;
   padding: 15px;
-  box-shadow: 5px 5px 5px;
-}
-::placeholder{
-  text-align: center;
-  align-items: center;
-}
-.name, .email, masseg::placeholder{
-  text-align: center;
 }
 .down{
   position: relative;
@@ -217,6 +214,9 @@ background-color: red;
     video{
         height: 250px;
         width: 50vh;
+    }
+    video:hover{
+        background-color: black;
     }
 </style>
 
