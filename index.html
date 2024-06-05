@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chrome.css">
+    <title>Abdiaziz</title>
+    <style>
+        *{
+  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+html, body{
+  font-family: Arial, sans-serif;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  position: absolute;
+}
+.header{
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-image: url(Feuer.jpg);
+  background-position: center;
+  color: white;
+  height: 10vh;
+
+}
+.minuul{
+  position: relative;
+  left: 5%;
+  top: 9%;
+}
+.h2ul{
+  position: relative;
+  left: 45%;
+  top: 10%;
+}
+nav{
+  height: 50vh;
+  background-image: url(Feuer1.jpg);
+  position: relative;
+  width: 100%;
+}
+.box{
+  display: grid;
+  grid-template-columns: repeat(2, .1fr);
+  box-shadow: 5px 5px 5px;
+}
+.lesen1{
+  height: 50vh;
+  color: white;
+}
+.lesen2{
+  height: 50vh;
+  width: vh;
+
+  color: white;
+}
+
+.postcreater{
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  color: black;
+  box-shadow: 5px 5px 5px;
+}
+.allfeed{
+  background-color: rgb(240, 242, 242);
+  box-shadow: 5px 5px 5px;
+}
+.name, .butt{
+  display: block;
+}
+.name, .email{
+  width: 50vh;
+  height: 7vh;
+  box-shadow: 5px 5px 5px;
+  margin: 5px;
+}
+.masseg{
+  height: 25vh;
+  width: 40vh;
+  box-shadow: 5px 5px 5px;
+}
+.butt{
+  width: 15vh;
+  padding: 15px;
+  box-shadow: 5px 5px 5px;
+}
+::placeholder{
+  text-align: center;
+  align-items: center;
+}
+.name, .email, masseg::placeholder{
+  text-align: center;
+}
+.down{
+  position: relative;
+  flex-direction: column;
+  top: ;
+  background-color: back;
+  background-color: black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 19vh;  
+  bottom: 0;
+}
+.ali{
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px;
+}
+#cookieConsentBanner {
+  font-family: Arial, sans-serif;
+  }
+
+.coockiediv{
+position: fixed;
+height: 10vh;
+width: 100%;
+}
+.coockiediv:hover{
+background-color: red;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <ul class="minuul">
+            <button>
+                <img src="minuwhite.png" alt="">
+            </button>
+        </ul>
+        <il class="h2ul">
+            <h2>willkomen</h2>
+        </il>
+    </div>
+    <br>
+    <span style="background-color: ; position: absolute; top: 10%;width: 100%;
+     text-align: center; background-color: yellow;">
+        <strong style="color: black;">wilkommen usere website</strong>
+    </span>
+    <nav>
+        <div class="box">
+            <div class="lesen1div">
+                <h6 class="lesen1">
+                </h6>
+            </div>
+            <div class="lesen2div">
+                <h6 class="lesen2">
+
+                </h6>
+            </div>
+        </div>
+
+    </nav>
+    <br>
+    <div class="postcreater">
+        <form action="https://api.web3forms.com/submit" method="POST" class="formdiv">
+            <div class="allfeed">
+              <input type="hidden" name="access_key" value="d63f6ca0-5303-4da8-ab05-6a5c88b7b224">
+              <input class="name" type="name" placeholder="Ihre Name">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <label for="email"></label>
+      <input class="name" id="email" type="email" placeholder="Email eingeben">
+      <p id="result"></p>
+          <textarea class="masseg" name="Masseg" placeholder="ihre fedback 
+          Kein schlechtes Gerede">
+      </textarea>
+      <button class="butt" type="submit">Send</button>
+      <p id="message" style="color:red;"></p>
+          </div>
+          </form>
+    </div>
+    <br>
+    <div class="down">
+        <div class="linkdiv">
+            <a class="ali" href="">Über uns</a>
+            <a class="ali" href="">Home</a>
+            <a class="ali" href="">bestellung</a>
+        </div>
+        <div class="linkdiv2">
+            <a class="ali" href="">Werbung</a>
+            <a class="ali" href="">nachrichten</a>
+            <a class="ali" href="">pay</a>
+        </div>
+        <div class="linkdiv3">
+            <button class="caawi">Hilfe</button>
+        </div>
+        <br>
+        <div class="coockiediv" id="cookieConsentBanner"
+        style="display: non; position: fixed; bottom: 0; width: 100%; background:
+         rgb(174, 99, 99); color: black; padding: 10px; text-align: center;">
+         Please accept our terms and conditions
+         This page is new but it is not using google search
+           <button class="onclick" onclick="acceptCookies()">Waan aqbalay</button>
+           <button class="onclick" onclick="rejectCookies()">waan diiday</button>
+       </div>
+</body>
+</html>
+<style>
+    .onclick{
+        background-color: blue;
+        color: white;
+    }
+</style>
+
+
+<script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+    var emailInput = document.getElementById('email');
+    var message = document.getElementById('message');
+
+    var email = emailInput.value;
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailPattern.test(email)) {
+        message.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+        event.preventDefault(); // Verhindert das Absenden des Formulars
+        return;
+    }
+
+    // Optional: Zusätzliche Überprüfung auf spezifische Domänen wie gmail.com
+    if (!email.endsWith('@gmail.com')) {
+        message.textContent = 'Bitte geben Sie eine Gmail-Adresse ein.';
+        event.preventDefault(); // Verhindert das Absenden des Formulars
+        return;
+    }
+
+    message.textContent = 'Die E-Mail-Adresse ist korrekt.'; // Erfolgreiche Validierung
+    message.style.color = 'green'; // Ändert die Textfarbe zu grün für erfolgreiche Meldung
+});
+
+function acceptCookies() {
+    setCookie("cookieConsent", "accepted", 365);
+    document.getElementById("cookieConsentBanner").style.display = "none";
+}
+
+function rejectCookies() {
+    setCookie("cookieConsent", "rejected", 365);
+    document.getElementById("cookieConsentBanner").style.display = "none";
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+</script>
