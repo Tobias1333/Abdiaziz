@@ -17,7 +17,7 @@ html, body{
   padding: 0;
   width: 100%;
   margin: 0;
-  height: 100%;
+  height: auto;
   position: absolute;
 }
 .header{
@@ -45,37 +45,31 @@ nav{
   background-image: url(Feuer1.jpg);
   position: relative;
   width: 100%;
+  height: auto;
 }
 .box{
-  display: grid;
-  grid-template-columns: repeat(2, .1fr);
+    display: flex;
+    justify-content: center;
 }
 .lesen1{
   height: 50vh;
   color: white;
 }
-.lesen2{
-  height: 50vh;
-  width: vh;
-
-  color: white;
-}
+.onclick{
+        background-color: blue;
+        color: white;
+    }
+    video{
+        height: 250px;
+        width: 50vh;
+        display: block;
+    }
+    video:hover{
+        background-color: black;
+    }
 
 .postcreater{
-    position: relative;
-  height: 55vh;
-  display: flex;
-  justify-content: center;
-  color: black;
-  background-image: url(window.png);
-  background-position: center;
-  background-size: cover;
-  height: 50vh;
-}
-.allfeed{
-  background-color: rgb(240, 242, 242);
-  height: 50vh;
-  background-color: aliceblue;
+    height: 10vh;
 }
 .name, .butt{
   display: block;
@@ -95,6 +89,10 @@ nav{
 .butt{
   width: 15vh;
   padding: 15px;
+}
+.all{
+    display: flex;
+    justify-content: center;
 }
 .down{
   position: relative;
@@ -128,7 +126,20 @@ width: 100%;
 background-color: red;
 }
 
+
     </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const navigateButton = document.getElementById('navigate-button');
+
+    navigateButton.addEventListener('click', () => {
+        window.location.href = 'indexchat.html'; // Verweist auf die Ziel-HTML-Datei
+    });
+});
+
+</script>
+
 </head>
 <body>
     <div class="header">
@@ -139,7 +150,7 @@ background-color: red;
         </ul>
         <il class="h2ul">
             <h2>willkomen</h2>
-         <a style="color: white;background-color: blue" href="indexchat.html">chat</a>
+
         </il>
     </div>
     <br>
@@ -151,33 +162,34 @@ background-color: red;
         <div class="box">
             <div class="lesen1div">
                 <video controls src="weiter.mp4"></video>
-                <h6 class="lesen1">
-                </h6>
-            </div>
-            <div class="lesen2div">
-                <h6 class="lesen2">
-
-                </h6>
+                <video controls src="scw.mp4"></video>
             </div>
         </div>
 
     </nav>
     <br>
+    <div class="all">
     <div class="postcreater">
         <form action="https://api.web3forms.com/submit" method="POST" class="formdiv">
-            <div class="allfeed">
+            <div class="alll">
               <input type="hidden" name="access_key" value="d63f6ca0-5303-4da8-ab05-6a5c88b7b224">
-              <input class="name" type="name" placeholder="Ihre Name">
+          <input class="name" type="name" placeholder="Ihre Name">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <label for="email"></label>
       <input class="name" id="email" type="email" placeholder="Email eingeben">
       <p id="result"></p>
-          <textarea class="masseg" name="Masseg" placeholder="ihre fedback">
+          <textarea class="masseg" name="Masseg" placeholder="ihre fedback 
+          Kein schlechtes Gerede">
       </textarea>
       <button class="butt" type="submit">Send</button>
-      <p id="message" style="color:red;"></p>
           </div>
           </form>
+    </div>
+    </div>
+    <br>
+    <div style="display: flex;justify-content: center;" class="chtbot">
+        <button class="chatbutt" id="navigate-button" style="height: 50px;
+        width: 50vh;background-color: blue;color: white;">chat bot</button>
     </div>
     <br>
     <div class="down">
@@ -205,45 +217,70 @@ background-color: red;
        </div>
 </body>
 </html>
+<script>
+        var links = document.querySelectorAll('a.ali');
+
+// Für jedes dieser Elemente einen Event-Listener hinzufügen
+links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Verhindert, dass der Link die Seite verlässt
+        alert('es ist noch nicht ereichbar Abdiaziz');
+    });
+});
+var button = document.querySelector('button.caawi');
+
+// Einen Event-Listener für das 'button' Element hinzufügen
+if (button) {
+    button.addEventListener('click', function() {
+        alert('geh oben und gib dein email und name ein schick mir emeil');
+    });
+}
+</script>
 <style>
-    .onclick{
-        background-color: blue;
-        color: white;
+    .chatbutt:hover{
+        backdrop-filter: yellow;
     }
-    video{
-        height: 250px;
-        width: 50vh;
+    .all{
+        position: relative;
+        height: 90vh;
+        box-sizing: border-box;
+        align-items: center;
+        background-image: url(window.png);
+        background-position: center;
+        background-size: cover;
     }
-    video:hover{
-        background-color: black;
+    
+    .postcreater{
+        background-color: rgb(154, 165, 165);
+        height: 55vh;
+    }
+    .coockiediv{
+        display: none;
     }
 </style>
 
 
 <script>
-    document.getElementById('emailForm').addEventListener('submit', function(event) {
-    var emailInput = document.getElementById('email');
-    var message = document.getElementById('message');
+  const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+const validate = () => {
+  const $result = $('#result');
+  const email = $('#email').val();
+  $result.text('');
+  if(validateEmail(email)){
+    $result.text(email + ', es seht gut aus.');
+    $result.css('color', 'green');
+  } else{
+    $result.text(email + ', noch übrig.');
+    $result.css('color', 'red');
+  }
+  return false;
+}
+$('#email').on('input', validate);
 
-    var email = emailInput.value;
-    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    if (!emailPattern.test(email)) {
-        message.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
-        event.preventDefault(); // Verhindert das Absenden des Formulars
-        return;
-    }
-
-    // Optional: Zusätzliche Überprüfung auf spezifische Domänen wie gmail.com
-    if (!email.endsWith('@gmail.com')) {
-        message.textContent = 'Bitte geben Sie eine Gmail-Adresse ein.';
-        event.preventDefault(); // Verhindert das Absenden des Formulars
-        return;
-    }
-
-    message.textContent = 'Die E-Mail-Adresse ist korrekt.'; // Erfolgreiche Validierung
-    message.style.color = 'green'; // Ändert die Textfarbe zu grün für erfolgreiche Meldung
-});
 
 function acceptCookies() {
     setCookie("cookieConsent", "accepted", 365);
