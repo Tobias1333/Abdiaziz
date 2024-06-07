@@ -157,7 +157,7 @@
             'wie kann ich support erhalten': 'Sie können uns per E-Mail oder über diesen Chat erreichen.'
         };
 
-        const response = botResponses[userMessage.toLowerCase()] || 'Bitte Kontaktieren Sie Abdiaziz.';
+        const response = botResponses[userMessage.toLowerCase()] || 'tut mir leid, diese frage habe ich kein antiwort.';
         setTimeout(() => {
             displayMessage(response, 'bot');
         }, 1000);
